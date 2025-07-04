@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-
-// id, size, x, y, opacity, animationDuration
-// id, size, x, y, delay, animationDuration
+import "../index.css";
 
 export const StarBackground = () => {
   const [stars, setStars] = useState([]);
@@ -11,12 +9,8 @@ export const StarBackground = () => {
     generateStars();
     generateMeteors();
 
-    const handleResize = () => {
-      generateStars();
-    };
-
+    const handleResize = () => generateStars();
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -26,7 +20,6 @@ export const StarBackground = () => {
     );
 
     const newStars = [];
-
     for (let i = 0; i < numberOfStars; i++) {
       newStars.push({
         id: i,
@@ -60,18 +53,18 @@ export const StarBackground = () => {
   };
 
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+    <div className="background-overlay">
       {stars.map((star) => (
         <div
           key={star.id}
-          className="star animate-pulse-subtle"
+          className="star twinkle"
           style={{
-            width: star.size + "px",
-            height: star.size + "px",
-            left: star.x + "%",
-            top: star.y + "%",
+            width: `${star.size}px`,
+            height: `${star.size}px`,
+            left: `${star.x}%`,
+            top: `${star.y}%`,
             opacity: star.opacity,
-            animationDuration: star.animationDuration + "s",
+            animationDuration: `${star.animationDuration}s`,
           }}
         />
       ))}
@@ -79,14 +72,14 @@ export const StarBackground = () => {
       {meteors.map((meteor) => (
         <div
           key={meteor.id}
-          className="meteor animate-meteor"
+          className="meteor shooting"
           style={{
-            width: meteor.size * 50 + "px",
-            height: meteor.size * 2 + "px",
-            left: meteor.x + "%",
-            top: meteor.y + "%",
-            animationDelay: meteor.delay,
-            animationDuration: meteor.animationDuration + "s",
+            width: `${meteor.size * 50}px`,
+            height: `${meteor.size * 2}px`,
+            left: `${meteor.x}%`,
+            top: `${meteor.y}%`,
+            animationDelay: `${meteor.delay}s`,
+            animationDuration: `${meteor.animationDuration}s`,
           }}
         />
       ))}
