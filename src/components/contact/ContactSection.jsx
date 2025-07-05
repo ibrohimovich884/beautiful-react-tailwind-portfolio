@@ -11,6 +11,7 @@ import {
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import "./Contact.css";
 
 export const ContactSection = () => {
   const { toast } = useToast();

@@ -1,5 +1,5 @@
 import { ArrowDown } from "lucide-react";
-import '../index.css';
+import './Hero.css';
 
 export const HeroSection = () => {
   return (

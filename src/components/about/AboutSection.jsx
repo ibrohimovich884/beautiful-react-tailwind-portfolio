@@ -1,5 +1,5 @@
 import { Briefcase, Code, User } from "lucide-react";
-import "../index.css";
+import "./About.css";
 
 export const AboutSection = () => {
   return (

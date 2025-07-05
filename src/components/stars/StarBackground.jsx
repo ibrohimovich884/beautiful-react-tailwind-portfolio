@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../index.css";
+import "./Star.css";
 
 export const StarBackground = () => {
   const [stars, setStars] = useState([]);

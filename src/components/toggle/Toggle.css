@@ -1,0 +1,32 @@
+/* Theme Toggle Button */
+
+.theme-toggle-button {
+  position: fixed;
+  border: 1px solid #000;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 50;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+@media (max-width: 639px) {
+  .theme-toggle-button {
+    display: none;
+  }
+}
+
+.theme-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.sun-icon {
+  color: #fde047; 
+}
+
+.moon-icon {
+  color: #1e3a8a; 
+}

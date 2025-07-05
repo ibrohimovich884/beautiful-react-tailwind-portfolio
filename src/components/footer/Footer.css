@@ -1,0 +1,33 @@
+
+.footer {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: var(--card);
+  position: relative;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-text {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.footer-top-btn {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background-color: rgba(var(--primary-rgb), 0.1);
+  color: var(--primary);
+  transition: background-color 0.3s ease;
+}
+
+.footer-top-btn:hover {
+  background-color: rgba(var(--primary-rgb), 0.2);
+}
